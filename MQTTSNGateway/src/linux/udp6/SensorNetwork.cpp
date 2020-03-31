@@ -296,6 +296,15 @@ int UDPPort6::open(const char* ipAddress, uint16_t uniPortNo, const char* broadc
 		return errnu;
 	}
 
+	// set hop limit
+        unsigned int hops = 64;
+        errnu = setsockopt(_sockfdMulticast, IPPROTO_IPV6, IPV6_MULTICAST_HOPS, &hops, sizeof(hops));
+        if (errnu < 0)
+        {
+                WRITELOG("UDP6::open - limit HOP: %s", strerror(errnu));
+                return errnu;
+        }
+
 	_uniPortNo = uniPortNo;
 	freeaddrinfo(res);
 
