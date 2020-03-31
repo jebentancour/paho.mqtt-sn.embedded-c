@@ -26,9 +26,9 @@ namespace MQTTSNGW
  *           Light Indicators
  ===========================================================*/
 #define MAX_GPIO                27    // GPIO02 - GPIO27
-#define LIGHT_INDICATOR_GREEN   23    // RPi connector 16
-#define LIGHT_INDICATOR_RED     24    // RPi connector 18
-#define LIGHT_INDICATOR_BLUE    25    // RPi connector 22
+#define LIGHT_INDICATOR_GREEN   17    // RPi connector 11
+#define LIGHT_INDICATOR_RED     22    // RPi connector 15
+#define LIGHT_INDICATOR_BLUE    12    // RPi connector 32
 
 /*============================================
  Timer
